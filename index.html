@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>BIKESPA</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script>
+        function rateStar(star) {
+            const stars = document.querySelectorAll('.review i');
+            stars.forEach((s, index) => {
+                if (index < star) {
+                    s.classList.remove('fa-star-o');
+                    s.classList.add('fa-star');
+                } else {
+                    s.classList.remove('fa-star');
+                    s.classList.add('fa-star-o');
+                }
+            });
+        }
+
+        function toggleMenu() {
+            const nav = document.querySelector('.header .nav');
+            nav.classList.toggle('active');
+        }
+
+        function openBookingPage() {
+            window.location.href = 'booking.html'; 
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo" onclick="location.href='home.html'">BIKESPA</div>
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="product.html">Product</a>
+        </div>
+        <div class="profile">
+            <i class="fas fa-user-circle"></i>
+            <span>Metatron</span>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <div class="ellipse"></div>
+            <div class="content">
+                <h1>Ride Clean<br/>Rule the <span style="color: rgb(255, 0, 87);">Streets!</span></h1>
+                <p>It's all about giving you the confidence to take on any road with a spotless, smooth ride.</p>
+                <button class="cta-button" onclick="openBookingPage ()">Book a home service now</button>
+            </div>
+            <img alt="Image of a high-end road bike" class="bike-image-above-ellipse" height="500" src="images/half bike.png" width="500"/>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>123 Street, Philippines</span>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="review">
+                <div class="stars">
+                    <i class="far fa-star" onclick="rateStar(1)"></i>
+                    <i class="far fa-star" onclick="rateStar(2)"></i>
+                    <i class="far fa-star" onclick="rateStar(3)"></i>
+                    <i class="far fa-star" onclick="rateStar(4)"></i>
+                    <i class="far fa-star" onclick="rateStar(5)"></i>
+                </div>
+                <span>1000+ Reviews</span>
+            </div>
+            <img alt="Image of a high-end road bike" class="bike-image" height="800" src="images/282eaba49dcdf02b94b0334174b9c776-removebg.png" width="800"/>
+            <div class="hours">
+                <span>Opens at 9am - 6pm</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 Created by Jorel Escoto</p>
+    </div>
+</body>
+</html>

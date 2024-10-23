@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKESPA</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/contact.css"/>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.header .nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo" onclick="location.href='home.html'">
+            BIKESPA
+        </div>
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="product.html">Product</a>
+        </div>
+        <div class="profile">
+            <i class="fas fa-user-circle" style="color: #FF3465;"></i>
+            <span>Metatron</span>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Contact</h1>
+        <h2>Information</h2>
+        <div class="info-box">+63 9269811566</div>
+        <h1>Location</h1>
+        <div class="location-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.8196271491277!2d121.0386987!3d14.589032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c967e12dcb2d%3A0x977ad63c1fabcb35!2s123%20Block!5e0!3m2!1sen!2sph!4v1697260539169!5m2!1sen!2sph"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <img alt="Bike wheel on the bottom left side" class="bike-image-left" src="images/santa.png"/>
+    <img alt="Bike wheel on the top right side" class="bike-image-right" src="images/cruz.png"/>
+    
+    <div class="footer">
+        <p>&copy; 2024 Created by Jorel Escoto</p>
+    </div>
+</body>
+</html>

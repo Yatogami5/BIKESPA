@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKESPA</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/product.css"/>
+</head>
+<body>
+    <div class="header">
+        <div class="logo" onclick="location.href='home.html'">
+            BIKESPA
+        </div>
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="product.html">Product</a>
+        </div>
+        <div class="profile">
+            <i class="fas fa-user-circle"></i>
+            <span>Metatron</span>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Product</h1>
+        <div class="products">
+            <div class="product">
+                <img alt="Image of the product" src="images/wd-40-specialist-bike-degreaser-classic-500ml-1-967561.jpg" onclick="openModal(this.src)"/>
+                <p>₱350</p>
+                <p>"WD-40 Specialist Bike - Degreaser Classic - 500ml"</p>
+            </div>
+            <div class="product">
+                <img alt="Image of the product" src="images/wd-40-specialist-bike-cleaner-500ml-1-967479.jpg" onclick="openModal(this.src)"/>
+                <p>₱350</p>
+                <p>"WD-40 Specialist Bike - Cleaner - 500ml"</p>
+            </div>
+            <div class="product">
+                <img alt="Image of the product" src="images/muc-off-miracle-shine-polish-500ml-1-1396351.jpg" onclick="openModal(this.src)"/>
+                <p>₱450</p>
+                <p>"Muc off - Miracle Shine Polish - 500ml"</p>
+            </div>
+            <div class="product">
+                <img alt="Image of the product" src="images/continental-race-tube-productpicture-30-0180000-1384217.jpg" onclick="openModal(this.src)"/>
+                <p>₱950</p>
+                <p>"Continental Race Inner Tube 27-28(sold as pair)"</p>
+            </div>
+            <div class="product">
+                <img alt="Image of the product" src="images/muc-off-microfibre-polishing-cloth-1225699.jpg" onclick="openModal(this.src)"/>
+                <p>₱150</p>
+                <p>"Microfibre Polishing Cloth"</p>
+            </div>
+            <div class="product">
+                <img alt="Image of the product" src="images/kaercher-oc-6-18-premium-battery-set-1-1709132.jpg" onclick="openModal(this.src)"/>
+                <p>₱4500</p>
+                <p>"Kaercher Cleaning Set"</p>
+            </div>
+            <div class="product">
+                <img alt="Image of the product" src="images/park-tool-cm-5-3-image-1-822253.jpg" onclick="openModal(this.src)"/>
+                <p>₱250e</p>
+                <p>"Chain Scrubber"</p>
+            </div>
+            <div class="product">
+                <img alt="Image of the product" src="images/86787-00-d-139687.jpg" onclick="openModal(this.src)"/>
+                <p>₱650</p>
+                <p>"SRAM Chain 11 Speed"</p>
+            </div>
+            <div class="product">
+                <img alt="Image of the product" src="images/muc-off-bicycle-ultimate-cleaning-kit-1-1381305.jpg" onclick="openModal(this.src)"/>
+                <p>₱700</p>
+                <p>"Muc Off Ultimate Cleaning Kit"</p>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Created by Jorel Escoto</p>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav').classList.toggle('active');
+        }
+        function openModal(src) {
+            document.getElementById('myModal').style.display = "block";
+            document.getElementById('img01').src = src;
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+    </script>
+</body>
+</html>

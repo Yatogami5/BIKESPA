@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKESPA</title>
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="https://storage.googleapis.com/a1aa/image/e4r5jUTlVfljx0XnpF9kYzT2DImOCCFwCvdc9Tg3THMnfPNnA.jpg" alt="Background image of a gravel bike" class="background">
+    <div class="overlay"></div>
+    <div class="header">
+        <div class="logo" onclick="location.href='index.html'">BIKESPA</div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="product.html">Product</a>
+        </div>
+        <div class="profile">
+            <i class="fas fa-user-circle"></i>
+            <span>Metatron</span>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Services</h1>
+        <div class="services">
+            <a href="Videos/istockphoto-1442076322-640_adpp_is.mp4" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Basic Wash – ₱150</h2>
+                <p>A quick, thorough clean to remove dirt and grime, leaving your bike fresh and ready to ride.</p>
+            </a>
+            <a href="Videos/istockphoto-1396963282-640_adpp_is.mp4" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Deluxe Wash & Shine – ₱250</h2>
+                <p>Includes a detailed wash, wax finish, and polish to keep your bike looking like new.</p>
+            </a>
+            <a href="Videos/istockphoto-1314212589-640_adpp_is.mp4" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Deep Clean – ₱400</h2>
+                <p>A full-service cleaning that tackles hard-to-reach areas, including drivetrain, wheels, and components.</p>
+            </a>
+            <a href="Videos/istockphoto-1323171086-640_adpp_is.mp4" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Wheel & Tire Care – ₱100</h2>
+                <p>Specialized cleaning and conditioning for wheels and tires to ensure optimal performance and shine.</p>
+            </a>
+            <a href="Videos/istockphoto-1352833185-640_adpp_is.mp4" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Drivetrain Degrease – ₱180</h2>
+                <p>Complete degreasing and lubrication of the chain, cassette, and derailleurs for a smoother ride.</p>
+            </a>
+            <a href="Videos/" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Protective Coating – ₱200</h2>
+                <p>Add a protective layer to your bike’s frame to guard against dirt, moisture, and scratches.</p>
+            </a>
+            <a href="Videos/Removing rust from bike chain #shorts.mp4" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Rust Removal & Prevention – ₱300</h2>
+                <p>Remove existing rust and apply a protective coating to prevent future corrosion.</p>
+            </a>
+            <a href="Videos/Klein Q Elite 61cm (Made by Trek) Road Bicycle After Detailing _ #shorts #bike #detailing.mp4" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Custom Detailing – ₱500</h2>
+                <p>Tailored bike cleaning for those who want every detail meticulously polished and perfected.</p>
+            </a>
+            <a href="Videos/cycleWASH Go – Die mobile Fahrradwaschanlage! Passt sogar auf einen Fahrrad-Anhänger 🤯.mp4" class="service-item" onclick="openModal(event, this.href)">
+                <h2>Mobile Bike Wash – ₱350</h2>
+                <p>On-the-go service where we come to your location and wash your bike wherever you are.</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 Created by Jorel Escoto</p>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <video class="modal-content" id="video01" controls>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.header .nav');
+            nav.classList.toggle('active');
+        }
+
+        function openModal(event, href) {
+            event.preventDefault();
+            const modal = document.getElementById("myModal");
+            const video = document.getElementById("video01");
+            modal.style.display = "block";
+            video.src = href;
+            video.play();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            const video = document.getElementById("video01");
+            modal.style.display = "none";
+            video.pause();
+            video.src = "";
+        }
+    </script>
+</body>
+</html>

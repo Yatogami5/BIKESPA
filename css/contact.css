@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    font-family: 'Tomorrow', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    border-bottom: 2px solid #FF3465;
+    position: relative;
+    z-index: 2;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header .nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 1;
+}
+
+.header .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .profile i {
+    font-size: 24px;
+    color: #FF3465;
+}
+
+.header .profile span {
+    font-size: 18px;
+}
+
+.header .burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 1024px) {
+    .header .nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        padding: 10px 0;
+        z-index: 3;
+        align-items: center;
+    }
+
+    .header .nav.active {
+        display: flex;
+    }
+
+    .header .burger {
+        display: flex;
+    }
+
+    .header .profile {
+        display: none;
+    }
+
+    .header .nav .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border-top: 1px solid #FF3465;
+    }
+
+    .header .nav .profile span {
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 30px 10px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .content .info-box {
+        font-size: 24px;
+        width: auto;
+        margin: 10px auto;
+    }
+
+    .content .location-box {
+        font-size: 18px;
+        width: 100%;
+        height: 200px;
+    }
+
+    .content .location-box iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bike-image-left,
+    .bike-image-right {
+        display: none;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        padding: 40px 20px;
+    }
+
+    .content h1 {
+        font-size: 42px;
+    }
+
+    .content h2 {
+        font-size: 32px;
+    }
+
+    .content .info-box {
+        font-size: 28px;
+        width: 300px;
+        margin: 20px auto;
+    }
+
+    .content .location-box {
+        font-size: 20px;
+        width: 100%;
+        height: 250px;
+    }
+
+    .content .location-box iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bike-image-left,
+    .bike-image-right {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .header .burger {
+        display: none;
+    }
+}
+
+.content {
+    text-align: center;
+    padding: 50px 20px;
+    flex: 1;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.content h2 {
+    font-size: 36px;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.content .info-box {
+    background-color: #ff4d6d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.content .location-box {
+    background-color: #ff4d6d;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 442px;
+    margin: 0 auto;
+}
+
+.content .location-box iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.bike-image-left {
+    display: flex;
+    position: absolute;
+    bottom: -200px;
+    left: 2px;
+    max-width: 500px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.bike-image-right {
+    display: flex;
+    position: absolute;
+    top: -62px;
+    right: 1px;
+    max-width: 500px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    border-top: 2px solid #FF3465;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+.bike-image-left,
+    .bike-image-right {
+        display: none;
+    }
+
